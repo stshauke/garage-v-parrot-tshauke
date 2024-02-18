@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #mainImage {
+            width: 300px; /* Taille de l'image principale */
+            height: auto;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .thumbnail {
+            width: 100px; /* Taille des miniatures */
+            height: auto;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .thumbnail:hover + #mainImage {
+            transform: translateX(-110px); /* Décalage de l'image principale au survol */
+        }
+    </style>
+    <title>Hover Image Gallery</title>
+</head>
+<body>
+<div>
+<img id="mainImage" src="Toyota_Corolla.png" alt="Main Image">
+</div>
+<img class="thumbnail" src="Volvo_volvo23.png" alt="Thumbnail 1">
+<img class="thumbnail" src="Audi_Q5.png" alt="Thumbnail 2">
+<img class="thumbnail" src="Toyota_Corolla.png" alt="Thumbnail 3">
+
+<script>
+    // Récupérer toutes les miniatures
+    var thumbnails = document.querySelectorAll('.thumbnail');
+
+    // Ajouter un écouteur d'événement sur chaque miniature
+    thumbnails.forEach(function(thumbnail) {
+        thumbnail.addEventListener('mouseover', function() {
+            // Changer l'image principale lors du survol de la miniature
+            var mainImage = document.getElementById('mainImage');
+            mainImage.src = thumbnail.src;
+        });
+    });
+</script>
+
+</body>
+</html>
