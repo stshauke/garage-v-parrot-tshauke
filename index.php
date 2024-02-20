@@ -629,13 +629,13 @@ $row_techniciens = $statement_techniciens->fetchAll(PDO::FETCH_ASSOC);
 
                         divContent += "<div class='col text-center'><strong>Image de la voiture</strong></div>";
                         divContent += "<div class='row'>";
-                        divContent += "<div class='col text-center'><img  id='mainImage' src='/img/voitures/" + response.image_voiture + "' alt='Image de la voiture' width='200' height='150'></div>";
+                        divContent += "<div class='col text-center'><img  id='mainImage' src='img/voitures/" + response.image_voiture + "' alt='Image de la voiture' width='200' height='150'></div>";
                         divContent += "</div>";
 
                         divContent += "<div class='row'>";
-                        divContent += "<div class='col'><img class='thumbnail' src='/img/voitures/" + response.image_voiture + "' alt='Image de la voiture'></div>";
-                        divContent += "<div class='col'><img class='thumbnail' src='/img/voitures/" + response.image_voiture + "' alt='Image de la voiture'></div>";
-                        divContent += "<div class='col'><img class='thumbnail' src='/img/voitures/" + response.image_voiture + "' alt='Image de la voiture'></div>";
+                        divContent += "<div class='col'><img class='thumbnail' src='img/voitures/" + response.image_voiture + "' alt='Image de la voiture'></div>";
+                        divContent += "<div class='col'><img class='thumbnail' src='img/voitures/" + response.image_voiture + "' alt='Image de la voiture'></div>";
+                        divContent += "<div class='col'><img class='thumbnail' src='img/voitures/" + response.image_voiture + "' alt='Image de la voiture'></div>";
 
                         divContent += "</div>";
 
